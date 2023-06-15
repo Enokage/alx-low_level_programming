@@ -1,5 +1,7 @@
 #include <stdio.h>
-/** main-Prints aa program that prints with puts function
+/**
+ * main -Entry point
+ * Description: It Prints a program with puts function
  * Return: 0 (success)
  */
 int main(void)
