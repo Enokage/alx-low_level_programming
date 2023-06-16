@@ -5,7 +5,7 @@
  *main - Entry point
  *Description: print a quote using write function
  *Return: 1.
-!*/
+*/
 int main(void)
 {
 int s;
