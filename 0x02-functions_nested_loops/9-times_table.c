@@ -1,44 +1,35 @@
-#include <unistd.h>
-
+#include "main.h"
 /**
- * _putchar - writes a character to the standard output
- * @c: the character to be written
- *
- * Return: On success, returns the number of characters written.
- * On error, returns -1 and sets errno appropriately.
- */
-int _putchar(char c)
-{
-    return write(1, &c, 1);
-}
-
-/**
- * times_table - prints the 9 times table
+ * times_table - prints the 9 times table, starting with 0
  */
 void times_table(void)
 {
-    int row, col, result;
+	int i, j, k;
 
-    for (row = 0; row <= 9; row++)
-    {
-        for (col = 0; col <= 9; col++)
-        {
-            result = row * col;
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			k = j * i;
+			if (j == 0)
+			{
+				_putchar(k + '0');
+			}
 
-            if (col != 0)
-            {
-                _putchar(',');
-                _putchar(' ');
-            }
-
-            if (result < 10 && col != 0)
-                _putchar(' ');
-
-            if (result >= 10)
-                _putchar((result / 10) + '0');
-
-            _putchar((result % 10) + '0');
-        }
-        _putchar('\n');
-    }
+			if (k < 10 && j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			} else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
