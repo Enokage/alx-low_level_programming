@@ -1,7 +1,7 @@
 /**
  * _abs - computes the absolute value of an integer
  * @n: the int to check
- * Return: the absolute value of int
+ * Return: the absolute value of num
  */
 int _abs(int num)
 {
